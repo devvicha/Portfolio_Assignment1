@@ -6,8 +6,33 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
-    margin: 15px;
+body {
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #6a82fb, #fc5c7d);
+  background-size: 800% 800%;
+  animation: gradientBG 15s ease infinite;
+  margin: 15px;
+  padding-top: 70px;
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+nav {
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
 
 .cover{
@@ -126,6 +151,16 @@ body{
     padding-top: 40px;
     width: 100%;
     height: 500px;  
+    background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.18) 0%,
+    rgba(0,0,0,0.12) 100%
+  );
+  border-radius: 24px;
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
 }
 .personalappr-container .sub-title{
     color: rgb(121, 124, 142);
@@ -153,41 +188,71 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    margin: 60px auto 40px auto;
+    padding: 40px 30px;
+    box-shadow: 0 8px 40px rgba(252,92,125,0.08), 0 2px 16px rgba(106,130,251,0.07);
+    max-width: 1200px;
 }
 .achivements h2{
-    font-size: 30px;
+    color: #6a82fb;
+    font-size: 2.5rem;
     text-align: center;
-    color: rgb(9, 20, 93);
-    margin-top: 50px;
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.achivements .sub-title{
-    text-align: center;
-    color: rgb(121, 124, 142);
-
-}
-
 .achivements-container{
     
     margin-top: 40px;
     display: flex;
-    justify-content: center;
-}
-.achivements-container .content{
-    width: 700px;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(106,130,251,0.07);
     padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.achivements-container .content h2,p{
-    text-align: start;
+.achivements-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(252,92,125,0.15), 0 2px 16px rgba(106,130,251,0.13);
 }
 
 .achivements-container img{
-    border-radius: 40px;
-    height: 350px;
-    width: 500px;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s;
 }
+
+.achivements-container img:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 40px 10px #6a82fb, 0 8px 32px rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+.achivements-container .content h2 {
+  font-size: 1.5rem;
+  color: #fc5c7d;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.achivements-container .content p {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
 .first-word{
-    color: rgb(9, 20, 93);
+    color: #6a82fb;
     font-weight: bold;
 }
 .talents{
@@ -207,42 +272,76 @@ body{
     padding-bottom: 10px;
 }
 
-.footer{
-
-    display: flex;
-    justify-content: center;
-    height: 250px;
-    width: 100%;
-    background-color: rgb(158, 158, 207,0.2);
-    border-radius: 0 0 20px 20px;
+.footer {
+  width: 96%;
+  margin: 2% auto 1% auto;
+  background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+  border-radius: 30px;
+  padding: 40px 0;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 32px rgba(106,130,251,0.08);
 }
 
-.address{
-    margin: 20px 80px;
-}
-.address h3{
-    color: rgb(9, 20, 93);
-    padding-bottom: 10px;
-}
-
-.social-media{
-    margin: 20px 80px;;
-}
-.social-media h3{
-    color: rgb(9, 20, 93);
-    padding-bottom: 10px;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
 }
 
-.address ul li{
-    list-style: none;
-
+.footer-column {
+  flex: 1;
+  min-width: 280px;
 }
-.social-media ul li{
-    list-style: none;
 
+.footer-column h3 {
+  color: #6a82fb;
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  font-weight: 700;
 }
-.social-media a{
-color: rgb(0, 0, 0);
- padding-left: 10px;   
- text-decoration: none;
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-column a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: #fc5c7d;
+}
+
+.footer-column i {
+  font-size: 1.2rem;
+  color: #6a82fb;
+  min-width: 22px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .footer {
+    padding: 30px 10px;
+  }
 }

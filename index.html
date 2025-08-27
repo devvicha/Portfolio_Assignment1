@@ -14,6 +14,16 @@
 <!-- here this the new assignment on web dev-->
 </head>
 <body>
+    <!-- Move navigation bar and theme toggle to the top -->
+    <nav>
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <!-- <li><a href="#about">About</a></li> --> <!-- Removed About -->
+        <li><a href="index2.html">Projects</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
     <div class="cover">
         <div class="title">
             <h2><strong>Personal</strong> <em>Blog Of G.Vichaksha Viduranga</em></h2>
@@ -186,46 +196,147 @@
 
     </div>
 
-    <div class="footer">
-        <div class="address">
-            <h3><span class="first-word">How can you reach me?</span></h3>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-location-dot"></i>
-                    129,<br>
-                    Bakmeegaha Road,<br>
-                    Athurugiriya.
-                </li>
-                <li>
-                    <i class="fa-solid fa-phone"></i>
-                    <p>
-                        +94771121545
-                    </p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>vichakshaviduranga@gmail.com</p>
-                </li>
-            </ul>
-
-            
-
-        </div>
-        <div class="social-media">
-            <ul>
-                <li><h3>Stay Conncted</h3></li>
-                <li><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/vithaksha.viduranga">vichaksha_vi/facebook.com</a></li>
-                <li><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/vichaksha_vi/?hl=en">Vichaksha_vi/instagram.com</a></li>
-                <li><i class="fa-brands fa-youtube"></i><a href="#">Vichaksha_vi/youtube.com</a></li>
-                
-            </ul>
-
-        </div>
-
+    <div class="footer" id="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>How can you reach me?</h3>
+      <ul>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          129,<br>
+          Bakmeegaha Road,<br>
+          Athurugiriya.
+        </li>
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          +94771121545
+        </li>
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          vichakshaviduranga@gmail.com
+        </li>
+      </ul>
     </div>
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <ul>
+        <li>
+          <i class="fa-brands fa-facebook"></i>
+          <a href="https://www.facebook.com/vithaksha.viduranga" target="_blank">vichaksha_vi/facebook.com</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-instagram"></i>
+          <a href="https://www.instagram.com/vichaksha_vi/?hl=en" target="_blank">Vichaksha_vi/instagram.com</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-youtube"></i>
+          <a href="#" target="_blank">Vichaksha_vi/youtube.com</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+    <style>
+        /* Add to your CSS file */
+:root {
+  --bg-color: #fff;
+  --text-color: #222;
+  --accent-color: #6a82fb;
+}
 
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s, color 0.4s;
+}
 
-    
+body.dark-mode {
+  --bg-color: #181818;
+  --text-color: #f1f1f1;
+  --accent-color: #fc5c7d;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+body {
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #6a82fb, #fc5c7d);
+  background-size: 800% 800%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+.btn:hover, img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.parallax {
+  background-image: url('your-image.jpg');
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+.navbar {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #6a82fb;
+  transition: width 0.3s;
+}
+
+.navbar a:hover {
+  color: #6a82fb;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+    </style>
+
+    <script>
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+});
+    </script>
 
 </body>
 </html>

@@ -14,51 +14,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+<nav>
+  <ul class="navbar">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index2.html">Projects</a></li>
+    <li><a href="#footer">Contact</a></li>
+  </ul>
+  <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+</nav>
 
     <!--porjects-->
     <div class="achivements">
         <h2>PROJECTS</h2>
-        <div>
-            <table>
-                <tr>
-                    <td class="achivements-container">
-                        <div class="content">
-                            <h2>Fully Automated IoT-Based Parking Space Management System. 🚗</h2><br>
-                            <p><span class="first-word">Technologies Used:</span> Google Firebase, React, Google map API, Arduino ESP8266 NodeMCU.</p>
-                            <p><span class="first-word">Description:</span>completion of a project that redefines parking in high-traffic areas with a seamless, tech-driven approach. We've developed a fully automated parking space management system, integrating real-time data collection and updates using ESP8266 NodeMCU and Google Firebase.</p>
-                            
-                            <p><span class="first-word">Learning:</span> Gained practical experience in System design and IoT applications.</p>
-                        </div>
-                        <div>
-                            <img src="robobattle1.jpg" alt="iamge" >
-                        </div>
-                        
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="achivements-container">
-                        <div>
-                            <img src="images/robobattle.jpg" alt="iamge" >
-                        </div>
-                        <div class="content">
-                            <h2>Technical Lead for National Robotics Championship</h2><br>
-                            <p><span class="first-word">Role:</span> Served as the technical lead for a national-level robotics competition.</p>
-                        <p><span class="first-word">Responsibilities:</span> Oversaw technical operations, ensured accurate scoring, and managed the event's technical infrastructure.</p>
-                        
-                        <p><span class="first-word">Outcome:</span> Successfully facilitated a smooth and engaging competition for participants.</p>
-                        </div>
-                        
-                        
-
-                    </td>
-                </tr>
-
-            </table>
-           
+        <div class="achivements-container">
+            <img src="Easypark.jpeg" alt="Project Image">
+            <div class="content">
+                <h2>Fully Automated IoT-Based Parking Space Management System. 🚗</h2>
+                <p><span class="first-word">Technologies Used:</span> Google Firebase, React, Google map API, Arduino ESP8266 NodeMCU.</p>
+                <p><span class="first-word">Description:</span> Completion of a project that redefines parking in high-traffic areas with a seamless, tech-driven approach. We've developed a fully automated parking space management system, integrating real-time data collection and updates using ESP8266 NodeMCU and Google Firebase.</p>
+                <p><span class="first-word">Learning:</span> Gained practical experience in System design and IoT applications.</p>
+            </div>
         </div>
+        <!-- Add more .achivements-container blocks for more projects -->
     </div>
-
     <!--porjects-->
 
 
@@ -76,7 +54,7 @@
                             <p><span class="first-word">Learning:</span> Gained practical experience in System design and IoT applications.</p>
                         </div>
                         <div>
-                            <img src="robobattle1.jpg" alt="iamge" >
+                            <img src="winnerIot.jpeg" alt="iamge" >
                         </div>
                         
 
@@ -118,5 +96,116 @@
 
     </div>
 
+    <div class="footer" id="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>How can you reach me?</h3>
+      <ul>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          129,<br>
+          Bakmeegaha Road,<br>
+          Athurugiriya.
+        </li>
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          +94771121545
+        </li>
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          vichakshaviduranga@gmail.com
+        </li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <ul>
+        <li>
+          <i class="fa-brands fa-facebook"></i>
+          <a href="https://www.facebook.com/vithaksha.viduranga" target="_blank">vichaksha_vi/facebook.com</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-instagram"></i>
+          <a href="https://www.instagram.com/vichaksha_vi/?hl=en" target="_blank">Vichaksha_vi/instagram.com</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-youtube"></i>
+          <a href="#" target="_blank">Vichaksha_vi/youtube.com</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <style>
+        /* Add to your CSS file */
+:root {
+  --bg-color: #fff;
+  --text-color: #222;
+  --accent-color: #6a82fb;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s, color 0.4s;
+}
+
+body.dark-mode {
+  --bg-color: #181818;
+  --text-color: #f1f1f1;
+  --accent-color: #fc5c7d;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #6a82fb;
+  transition: width 0.3s;
+}
+
+.navbar a:hover {
+  color: #6a82fb;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+    </style>
+    <script>
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+});
+</script>
 </body>
 </html>
